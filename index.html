@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,300&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Erbol Sultanov -->
+    <div class="pass-generate">
+      <div class="container">
+        <!-- TOP -->
+        <div id="top" class="top">
+          <div class="close-btns">
+            <li><i class="fa-regular fa-question"></i></li>
+            <li><i class="fa-solid fa-xmark"></i></li>
+          </div>
+          <div class="title">Генератор паролей</div>
+        </div>
+        <!-- //TOP -->
+        <!-- CENTER -->
+        <div id="center" class="center">
+          <div id="historyBtn" class="center-top">
+            <li><i class="fa-solid fa-clock-rotate-left"></i></li>
+            <li><i class="fa-solid fa-chevron-down"></i></li>
+          </div>
+          <div id="history" class="history">
+            <div>
+              <p>Последние пароли</p>
+              <ul class="last-pass-items"></ul>
+              <div class="last-pass-clear">
+                <button id="clear-last-pass" class="copy-pass">Очистить список</button>
+              </div>
+            </div>
+          </div>
+          <div class="center-middle">
+            <!-- <input type="text" id="pass-generate-input" value="" /> -->
+            <div id="pass-generate-input"></div>
+            <li id="reloadBtn"><i class="fa-solid fa-rotate"></i></li>
+          </div>
+          <div class="center-bottom">
+            <button id="copy-pass" class="copy-pass">Копировать</button>
+          </div>
+        </div>
+        <!-- //CENTER -->
+        <!-- PRE-BOTTOM -->
+        <div id="pre-bottom" class="pre-bottom">
+          <div class="text">Длина пароля:</div>
+          <input id="pass-longer" value="16" max="99" min="4" class="pass-longer" type="number" />
+        </div>
+        <!-- //PRE-BOTTOM -->
+        <!-- BOTTOM -->
+        <div id="bottom" class="bottom">
+          <ul class="variations">
+            <li><input checked id="upper" class="pass-variations" type="checkbox" /></li>
+            <li>Прописные буквы (A-Z)</li>
+          </ul>
+          <ul class="variations">
+            <li><input checked id="lower" class="pass-variations" type="checkbox" /></li>
+            <li>Строчные буквы (a-z)</li>
+          </ul>
+          <ul class="variations">
+            <li><input checked id="number" class="pass-variations" type="checkbox" /></li>
+            <li>Цифры (0-9)</li>
+          </ul>
+          <ul class="variations">
+            <li><input checked id="symbol" class="pass-variations" type="checkbox" /></li>
+            <li>
+              <input
+                value="~!@#$%^&*+-/.,\{}[]();:|?<>='`"
+                type="text"
+                id="symbols-variations"
+                class="symbols-variations"
+                style="max-width: 390px; width: 100%; min-width: 320px" />
+            </li>
+          </ul>
+        </div>
+        <!-- BOTTOM -->
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/90114b954f.js" crossorigin="anonymous" defer></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
